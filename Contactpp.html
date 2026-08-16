@@ -1,0 +1,257 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Eyuel Wondwossen</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #050b14;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            background: #080f1c;
+            border-bottom: 1px solid #1e9bff;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #5dbbff;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #d8eaff;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #5dbbff;
+        }
+
+        /* Contact section */
+        .contact-section {
+            min-height: calc(100vh - 75px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .contact-container {
+            width: 100%;
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            padding: 50px;
+            background: #0a1422;
+            border: 1px solid #1e9bff;
+            border-radius: 20px;
+            box-shadow: 0 0 35px rgba(30, 155, 255, 0.15);
+        }
+
+        .contact-info h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info h1 span {
+            color: #5dbbff;
+        }
+
+        .contact-info p {
+            color: #a9bad0;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .info-item h3 {
+            color: #5dbbff;
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            margin: 0;
+            color: #d8eaff;
+        }
+
+        /* Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #263b52;
+            border-radius: 10px;
+            background: #050b14;
+            color: white;
+            outline: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #5dbbff;
+            box-shadow: 0 0 10px rgba(93, 187, 255, 0.2);
+        }
+
+        textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        button {
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #5dbbff;
+            color: #050b14;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #8dccff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(93, 187, 255, 0.25);
+        }
+
+        /* Mobile */
+        @media (max-width: 750px) {
+            nav {
+                padding: 0 5%;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                padding: 30px;
+            }
+
+            .contact-info h1 {
+                font-size: 35px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            nav ul {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+.contact-container {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Eyuel.</div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            
+            
+        </ul>
+    </nav>
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h1>Let's <span>Connect.</span></h1>
+
+                <p>
+                    Have a project in mind, want to work together,
+                    or just want to say hello? Feel free to reach out.
+                </p>
+
+                <div class="info-item">
+                    <h3>Email</h3>
+                    <p>eyuel0998@gmail.com</p>
+                </div>
+                 <div class="info-item">
+                    <h3>Phone number</h3>
+                    <p>0998651735 or
+                    </br>0947797027
+                    </p>
+                </div>
+
+
+                <div class="info-item">
+                    <h3>Location</h3>
+                    <p>Addis Ababa, Ethiopia</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Available For</h3>
+                    <p>Web Development & Software Projects</p>
+                </div>
+            </div>
+
+            <form action="https://formspree.io/f/maewpnqy"
+            method="post">
+                <input name="Name" type="text" placeholder="Your Name" required>
+
+                <input name="Email" type="email" placeholder="Your Email" required>
+
+                <input name="Subject" type="text" placeholder="Subject">
+
+                <textarea placeholder="Your Message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
